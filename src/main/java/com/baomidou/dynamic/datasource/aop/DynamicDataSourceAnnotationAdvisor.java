@@ -41,7 +41,7 @@ public class DynamicDataSourceAnnotationAdvisor extends AbstractPointcutAdvisor 
 
     public DynamicDataSourceAnnotationAdvisor(@NonNull DynamicDataSourceAnnotationInterceptor dynamicDataSourceAnnotationInterceptor) {
         this.advice = dynamicDataSourceAnnotationInterceptor;
-        this.pointcut = buildPointcut();
+        this.pointcut = this.buildPointcut();
     }
 
     @Override

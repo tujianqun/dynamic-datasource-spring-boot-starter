@@ -28,7 +28,7 @@ public class ApplicationTest {
 
     @Before
     public void beforeTest() {
-        try {
+        /*try {
             Connection connection = dataSource.getConnection();
             connection.createStatement().execute("CREATE TABLE IF NOT EXISTS  USER (\n" +
                     "  id BIGINT(20) NOT NULL AUTO_INCREMENT,\n" +
@@ -39,7 +39,7 @@ public class ApplicationTest {
             connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
     @Test
