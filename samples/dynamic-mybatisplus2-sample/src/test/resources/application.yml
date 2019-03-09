@@ -1,13 +1,15 @@
 spring:
+  name: springboot
   datasource:
     dynamic:
+      primary: master
       datasource:
         master:
           username: root
           password: innoChinaAdmin
-          url: jdbc:mysql://192.168.203.68:3306/tu_admin?useUnicode=true&characterEncoding=utf8&useSSL=false
+          url: jdbc:mysql://192.168.203.68:3306/tu_admin?useUnicode=true&characterEncoding=UTF-8
           driver-class-name: com.mysql.jdbc.Driver
-        slave_1:
+        mysql2:
           username: root
           password: innoChinaAdmin
           url: jdbc:mysql://192.168.203.68:3306/tu_test1?useUnicode=true&characterEncoding=UTF-8

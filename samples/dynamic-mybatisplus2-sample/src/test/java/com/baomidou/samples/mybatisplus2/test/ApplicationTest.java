@@ -1,7 +1,9 @@
 package com.baomidou.samples.mybatisplus2.test;
 
 import com.baomidou.samples.mybatisplus2.Application;
+import com.baomidou.samples.mybatisplus2.entity.Address;
 import com.baomidou.samples.mybatisplus2.entity.User;
+import com.baomidou.samples.mybatisplus2.service.AddressService;
 import com.baomidou.samples.mybatisplus2.service.UserService;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,6 +28,9 @@ public class ApplicationTest {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    AddressService addressService;
+
     @Before
     public void beforeTest() {
         /*try {
@@ -47,10 +52,19 @@ public class ApplicationTest {
         User user = new User();
         user.setName("测试用户" + random.nextInt());
         user.setAge(random.nextInt(100));
-        userService.addUser(user);
+        userService.insert(user);
+
+        saveAddress();
     }
 
-    @Test
+
+    public void saveAddress(){
+        Address user = new Address();
+        user.setIp("192.168.203.68");
+        user.setAddress("我是好人，我很好");
+        addressService.insert(user);
+    }
+    //@Test
     public void testSelectUser() {
         userService.selectList(null);
     }
